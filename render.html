@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generar Once Inicial</title>
+  <div id="controls">
+  <button onclick="generarOnce()">Generar Once Inicial</button>
+</div>
+  <div id="controls">
+  <button onclick="generarOnce()">Generar Once Inicial</button>
+  <button onclick="descargarImagen()">Descargar Once Inicial</button>
+</div>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -89,6 +96,19 @@
         ctx.fillText(pos.nombre, pos.x - 40, pos.y + 50);  // Nombre del jugador
       });
     }
+    <script>
+  function generarOnce() {
+    // Código que ya tienes para generar el once inicial
+  }
+
+  function descargarImagen() {
+    const canvas = document.getElementById('onceCanvas'); // Selecciona el canvas
+    const enlace = document.createElement('a');  // Crea un enlace (etiqueta <a>)
+    enlace.href = canvas.toDataURL('image/png'); // Convierte el contenido del canvas a formato PNG
+    enlace.download = 'once_inicial.png'; // Define el nombre del archivo que se descargará
+    enlace.click();  // Simula el clic en el enlace para descargar la imagen
+  }
+</script>
   </script>
 </body>
 </html>
