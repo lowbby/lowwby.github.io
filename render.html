@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Once Inicial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    canvas {
+      border: 1px solid #000;
+    }
+
+    #controls {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generar Once Inicial</h1>
+
+  <div id="controls">
+    <button onclick="generarOnce()">Generar Once Inicial</button>
+  </div>
+
+  <canvas id="onceCanvas" width="600" height="400"></canvas>
+
+  <script>
+    function generarOnce() {
+      const canvas = document.getElementById('onceCanvas');
+      const ctx = canvas.getContext('2d');
+
+      // Limpiar el canvas antes de dibujar
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Dibujar el fondo del equipo (por ejemplo, los colores del equipo)
+      ctx.fillStyle = '#007BFF';  // Color de fondo (color del equipo)
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Dibujar el escudo del club
+      ctx.fillStyle = '#fff';
+      ctx.font = '20px Arial';
+      ctx.fillText('Escudo del Club', 20, 50);
+
+      // Posiciones del once inicial (puedes ajustar estas posiciones)
+      const posiciones = [
+        { nombre: 'Portero', x: 270, y: 50 },
+        { nombre: 'Defensa 1', x: 150, y: 150 },
+        { nombre: 'Defensa 2', x: 270, y: 150 },
+        { nombre: 'Defensa 3', x: 390, y: 150 },
+        { nombre: 'Mediocampista 1', x: 150, y: 250 },
+        { nombre: 'Mediocampista 2', x: 270, y: 250 },
+        { nombre: 'Mediocampista 3', x: 390, y: 250 },
+        { nombre: 'Delantero 1', x: 150, y: 350 },
+        { nombre: 'Delantero 2', x: 270, y: 350 },
+        { nombre: 'Delantero 3', x: 390, y: 350 },
+      ];
+
+      // Dibujar los jugadores en sus posiciones
+      ctx.fillStyle = '#fff';
+      ctx.font = '16px Arial';
+      posiciones.forEach(pos => {
+        ctx.beginPath();
+        ctx.arc(pos.x, pos.y, 30, 0, Math.PI * 2, true); // Círculo para el jugador
+        ctx.fillStyle = '#FF6347'; // Color del círculo (puedes cambiarlo según el equipo)
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.fillText(pos.nombre, pos.x - 40, pos.y + 50);  // Nombre del jugador
+      });
+    }
+  </script>
+</body>
+</html>
