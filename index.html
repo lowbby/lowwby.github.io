@@ -64,6 +64,31 @@
   <p>By Teams For Teams</p>
 </header>
 <div class="login-buttons">
+  <div class="club-registro">
+  <h2>Registro de Club</h2>
+  <form>
+    <label for="nombreClub">Nombre del Club:</label>
+    <input type="text" id="nombreClub" name="nombreClub" required>
+    
+    <label for="estadio">Estadio:</label>
+    <input type="text" id="estadio" name="estadio" required>
+    
+    <label for="historia">Breve Historia del Club:</label>
+    <textarea id="historia" name="historia" required></textarea>
+    
+    <label for="colores">Colores del Equipo:</label>
+    <input type="text" id="colores" name="colores" required>
+    
+    <label for="valores">Valores del Club:</label>
+    <input type="text" id="valores" name="valores" required>
+    
+    <label for="escudo">Subir Escudo del Club:</label>
+    <input type="file" id="escudo" name="escudo" required>
+    
+    <button type="submit">Registrar Club</button>
+  </form>
+</div>
+
   <button onclick="loginGoogle()">Iniciar Sesión con Google</button>
   <button onclick="loginApple()">Iniciar Sesión con Apple</button>
   <button onclick="loginMicrosoft()">Iniciar Sesión con Microsoft</button>
