@@ -1,106 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lowwby - By Teams For Teams</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
-    }
-    h1 {
-      font-size: 2.5em;
-    }
-    .container {
-      margin: 20px auto;
-      padding: 20px;
-      width: 80%;
-      max-width: 1200px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    footer {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Lowwby</h1>
-    <p>By Teams For Teams</p>
-  </header>
-  <div class="container">
-    <h2>Bienvenido a Lowwby</h2>
-    <p>Facilitando la digitalización de clubes deportivos de fútbol sin recursos.</p>
-  </div>
-  <footer>
-    <p>&copy; 2024 Lowwby. Todos los derechos reservados.</p>
-  </footer>
-</body>
-</html>
-<nav>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="about.html">Sobre nosotros</a></li>
-    <li><a href="contact.html">Contacto</a></li>
-  </ul>
-</nav>
-<header>
-  <img src="ruta_del_logo.png" alt="Logo Lowwby" style="width: 150px;">
-  <h1>Lowwby</h1>
-  <p>By Teams For Teams</p>
-</header>
-<div class="login-buttons">
-  <div class="club-registro">
-  <h2>Registro de Club</h2>
-  <form>
-    <label for="nombreClub">Nombre del Club:</label>
-    <input type="text" id="nombreClub" name="nombreClub" required>
-    
-    <label for="estadio">Estadio:</label>
-    <input type="text" id="estadio" name="estadio" required>
-    
-    <label for="historia">Breve Historia del Club:</label>
-    <textarea id="historia" name="historia" required></textarea>
-    
-    <label for="colores">Colores del Equipo:</label>
-    <input type="text" id="colores" name="colores" required>
-    
-    <label for="valores">Valores del Club:</label>
-    <input type="text" id="valores" name="valores" required>
-    
-    <label for="escudo">Subir Escudo del Club:</label>
-    <input type="file" id="escudo" name="escudo" required>
-    
-    <button type="submit">Registrar Club</button>
-  </form>
-</div>
-
-  <button onclick="loginGoogle()">Iniciar Sesión con Google</button>
-  <button onclick="loginApple()">Iniciar Sesión con Apple</button>
-  <button onclick="loginMicrosoft()">Iniciar Sesión con Microsoft</button>
-  <button onclick="crearCuenta()">Crear Cuenta</button>
-</div>
-<!DOCTYPE html>
-<html lang="es">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOWBBY - By Teams for Teams</title>
     <style>
+        /* Reseteo de márgenes y paddings */
         body, html {
             margin: 0;
             padding: 0;
@@ -113,6 +18,7 @@
             font-family: 'Arial', sans-serif;
         }
 
+        /* Estilo del contenedor principal */
         .container {
             position: relative;
             text-align: center;
@@ -120,21 +26,23 @@
             height: 100%;
         }
 
+        /* Estilo de la imagen de fondo */
         .container img {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: -1; /* Imagen al fondo */
         }
 
+        /* Estilos de los botones */
         .buttons {
             position: absolute;
             bottom: 15%;
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 20px; /* Espacio entre botones */
         }
 
         .button {
@@ -149,28 +57,37 @@
             border-radius: 5px;
         }
 
+        /* Animación de hover */
         .button:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Ampliación */
             background-color: #d4d431;
         }
 
         .button:active {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Leve ampliación en click */
         }
 
         .button:focus {
-            outline: none;
+            outline: none; /* Sin borde en focus */
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- Imagen de fondo que subiste -->
     <img src="LOWBBY.png" alt="LOWBBY Background">
     
+    <!-- Botones de inicio de sesión y registro -->
     <div class="buttons">
         <button class="button" onclick="location.href='login.html'">INICIAR SESIÓN</button>
         <button class="button" onclick="location.href='register.html'">REGISTRARSE</button>
+    </div>
+</div>
+
+</body>
+</html>
+
     </div>
 </div>
 
