@@ -94,3 +94,85 @@
   <button onclick="loginMicrosoft()">Iniciar Sesión con Microsoft</button>
   <button onclick="crearCuenta()">Crear Cuenta</button>
 </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOWBBY - By Teams for Teams</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 15%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #f7f734;
+            color: black;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #d4d431;
+        }
+
+        .button:active {
+            transform: scale(1.05);
+        }
+
+        .button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="LOWBBY.png" alt="LOWBBY Background">
+    
+    <div class="buttons">
+        <button class="button" onclick="location.href='login.html'">INICIAR SESIÓN</button>
+        <button class="button" onclick="location.href='register.html'">REGISTRARSE</button>
+    </div>
+</div>
+
+</body>
+</html>
